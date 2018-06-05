@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import FilmPage from './../components/FilmPage';
-import { withRouter } from 'react-router';
+import { withRouter } from 'next/router';
 import { fetchMovieById, fetchSameGenres} from './../thunks/FetchMovies';
 
 let mapStateToProps = (state, ownProps) => {
-    let id = ownProps.match.params.id || '0';
-
+    // let id = ownProps.match.params.id || '0';
+    console.log(ownProps)
     return {
-        filmId: id,
+        // filmId: id,
         sortBy: state.sortBy,
         activeMovie: state.activeMovie,
         sameGenreMovies: state.sameGenreMovies
@@ -26,9 +26,11 @@ let mapDispatchToProps = (dispatch) => {
 
 };
 
-export default withRouter(
+export default 
+// withRouter(
     connect(
         mapStateToProps, 
         mapDispatchToProps
-    )(FilmPage));
+    )(FilmPage)
+// );
 

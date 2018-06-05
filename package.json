@@ -10,6 +10,7 @@
     "lodash": "^4.17.10",
     "next": "^6.0.3",
     "node-sass": "^4.9.0",
+    "path-match": "^1.2.4",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",

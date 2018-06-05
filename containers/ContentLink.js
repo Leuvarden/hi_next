@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
 import PropTypes from 'prop-types';
 
 const ContentLink = ({ id, children }) => (
-    <Link to={`/films/${id}`} >
-        {children}
+    <Link href={`/films?id=${id}`}  
+    // as={`/films/${id}`}
+    >
+        <a>{children}</a>
     </Link>
 );
 
