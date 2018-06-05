@@ -1,10 +1,14 @@
-import Logo from './common/Logo'
+import React from 'react';
+import ContentAreaContainer from './../containers/ContentAreaContainer';
+import SearchPanel from './header/SearchPanel';
 
-const MainPage = () => (
-    <div>
-        <Logo />
-        Welcome to next.js! Rewrite it
-    </div>
-);
+const MainPage = () => {
+    return (
+        <main>
+            <SearchPanel />
+            <ContentAreaContainer />
+        </main>
+    );
+};
 
 export default MainPage;

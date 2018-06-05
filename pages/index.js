@@ -1,4 +1,13 @@
+import Page from './../components/Page'
 import MainPage from './../components/MainPage'
 import './../scss/body.scss'
 
-export default MainPage;
+const Index = () => {
+    return (
+        <Page>
+            <MainPage />
+        </Page>
+    )
+}
+
+export default Index;
