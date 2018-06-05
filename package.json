@@ -1,0 +1,25 @@
+{
+  "name": "hi_next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "isomorphic-unfetch": "^2.0.0",
+    "next": "^6.0.3",
+    "node-sass": "^4.9.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "sass-loader": "^7.0.2",
+    "thunk": "0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "",
+  "license": "ISC"
+}

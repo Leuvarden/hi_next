@@ -1,0 +1,8 @@
+node_modules
+*.bundle.js
+*.log
+dist/
+.vscode
+coverage
+public
+.next
