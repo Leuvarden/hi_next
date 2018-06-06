@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SearchForm from '../components/header/SearchForm';
-// import { withRouter } from 'react-router';
+import { withRouter } from 'next/router';
 import { setSearchParams } from '../actions';
 
 let mapStateToProps = (state) => {
@@ -11,22 +11,21 @@ let mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    console.log(ownProps)
     return {
         setSearchParams: (params, sortBy) => {
             
             dispatch(setSearchParams(params, dispatch, sortBy));
 
-            // if (params.query.length) {
-            //     ownProps.history.push(`/?query=${params.query}&searchBy=${params.searchBy}`);
-            // } else {
-            //     ownProps.history.push(`/?query=all&searchBy=${params.searchBy}`);
-            // }
+            if (params.query.length) {
+                ownProps.router.push(`/?query=${params.query}&searchBy=${params.searchBy}`);
+            } else {
+                ownProps.router.push(`/?query=all&searchBy=${params.searchBy}`);
+            }
         }
     };
 };
 
 export default 
-// withRouter(
+withRouter(
     connect(mapStateToProps, mapDispatchToProps)(SearchForm)
-// );
+);

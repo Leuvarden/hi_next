@@ -4,10 +4,8 @@ import { withRouter } from 'next/router';
 import { fetchMovieById, fetchSameGenres} from './../thunks/FetchMovies';
 
 let mapStateToProps = (state, ownProps) => {
-    // let id = ownProps.match.params.id || '0';
-    console.log(ownProps)
     return {
-        // filmId: id,
+        filmId: ownProps.id,
         sortBy: state.sortBy,
         activeMovie: state.activeMovie,
         sameGenreMovies: state.sameGenreMovies

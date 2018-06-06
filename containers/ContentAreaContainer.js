@@ -1,7 +1,7 @@
 import orderBy from 'lodash/orderBy';
 import { connect } from 'react-redux';
 import ContentArea from './../components/main/ContentArea';
-// import { withRouter } from 'react-router';
+import { withRouter } from 'next/router';
 import { setSearchParams } from './../actions/index';
 
 const sortMovies = (movies=[], sortBy='title') => orderBy(movies, [sortBy], 'asc');
@@ -23,11 +23,11 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default 
-// withRouter(
+withRouter(
     connect(
         mapStateToProps,
         mapDispatchToProps,
     )(ContentArea)
-// );
+);
 
 

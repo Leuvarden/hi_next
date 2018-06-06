@@ -8,8 +8,7 @@ const SearchPanel = () => {
         <section className="search-panel">
             <div className="search-panel__container">
                 <SearchFormContainer />
-                {/* <SortPanelContainer /> */}
-                hi searchpanel
+                <SortPanelContainer />
             </div>
         </section>
     );

@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import EmptyContent from './contentItems/EmptyContent';
 import ContentItem from './contentItems/ContentItem';
 import './../../scss/content-area.scss';
+import Router from 'next/router';
 
 class ContentArea extends Component {
     render() {   
@@ -16,14 +17,12 @@ class ContentArea extends Component {
     }
 
     componentDidMount() {
-        if (!this.props.location) {
+        if (!Router.router.query) {
             return;
         }
 
-        const params = new URLSearchParams(this.props.location.search);
-        
-        let searchBy = params.get('searchBy');
-        let query = (params.get('query') === 'all') ? '' : params.get('query');
+        let searchBy = Router.router.query.searchBy
+        let query = (Router.router.query.query === 'all') ? '' : Router.router.query.query;
 
         if (query && query.length) {
             this.props.setSearchParams({query, searchBy});

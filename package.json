@@ -21,7 +21,9 @@
     "sass-loader": "^7.0.2",
     "thunk": "0.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",

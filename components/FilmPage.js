@@ -5,21 +5,25 @@ import ContentArea from './main/ContentArea';
 import './../scss/film-panel.scss';
 
 class FilmPage extends Component {
+    static getInitialProps () {
+        this.props.fetchMovieById(this.props.filmId);
+      }
+
     render () {
         return (
             <div>
-                {/* {this.props.activeMovie.genres && <FilmPanel movie={this.props.activeMovie} />} */}
-                {/* <ContentArea movies={this.props.sameGenreMovies} activeMovie={this.props.activeMovie} /> */}
-                hi filmPage
+                {this.props.activeMovie.genres && <FilmPanel movie={this.props.activeMovie} />}
+                <ContentArea movies={this.props.sameGenreMovies} activeMovie={this.props.activeMovie} />
+                hi filmPage {this.props.filmId}
             </div>
         );
     }
     
     //todo: FilmPage doesn't rerender after navigation through links, location of render persists
-    // componentDidMount() {
-    //     this.props.fetchMovieById(this.props.filmId);
-    //     this.props.getSameGenres(this.props.filmId, this.props.sortBy);
-    // }
+    componentDidMount() {
+        this.props.fetchMovieById(this.props.filmId);
+        this.props.getSameGenres(this.props.filmId, this.props.sortBy);
+    }
 }
 
 export default FilmPage;
