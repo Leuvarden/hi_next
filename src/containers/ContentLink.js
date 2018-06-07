@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ContentLink = ({ id, children }) => (
     <Link href={`/films?id=${id}`}  
-    // as={`/films/${id}`}
+        as={`/films/${id}`}
     >
         <a>{children}</a>
     </Link>

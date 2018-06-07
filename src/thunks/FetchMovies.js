@@ -38,6 +38,7 @@ export const fetchMoviesForSearch = (searchQuery, searchBy, sortBy) => {
 };
 
 export const fetchMovieById = (id) => {
+    console.log(id)
     return (dispatch) => {
         let urlSearch = `${url}/${id}`;
 

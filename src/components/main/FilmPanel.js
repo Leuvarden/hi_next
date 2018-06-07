@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './../../scss/film-panel.scss';
+import './../../../static/styles/film-panel.scss';
 
 export class FilmPanel extends Component {
     render () {

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentArea renders as expected 1`] = `<ContentArea />`;
+
+exports[`ContentArea renders content items if there is 3 items 1`] = `<ContentArea />`;
+
+exports[`ContentArea renders film panel if there is current items 1`] = `<ContentArea />`;

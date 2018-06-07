@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchPanel renders as expected 1`] = `
+<section
+  class="search-panel"
+>
+  <div
+    class="search-panel__container"
+  >
+    <div
+      class="logo"
+    >
+      netflixroulette
+    </div>
+    <div
+      class="search-panel__form"
+    >
+      <label
+        for="searchPanelInput"
+      >
+        Find your movie
+      </label>
+      <input
+        id="searchPanelInput"
+        type="text"
+      />
+    </div>
+    <div
+      class="search-panel__filter"
+    >
+      <label
+        id="filterDescription"
+      >
+        Search by:
+      </label>
+      <button
+        class="search-panel__button-filter 
+                    "
+      >
+        title
+      </button>
+      <button
+        class="search-panel__button-filter 
+                    "
+      >
+        genres
+      </button>
+      <button
+        class="search-panel__button-search"
+      >
+        Search
+      </button>
+    </div>
+    <div
+      class="search-panel__sorting"
+    >
+      <span
+        class="movies-count"
+      >
+        0 movies found
+      </span>
+      <span
+        class="sorting__buttons"
+      >
+        <label>
+          Sort by:
+        </label>
+        <button>
+          release date
+        </button>
+        <button>
+          title
+        </button>
+      </span>
+    </div>
+  </div>
+</section>
+`;

@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import './../../scss/search-panel.scss';
 import Router from 'next/router';
 import { withRouter } from 'next/router';
 

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentItem renders as expected 1`] = `
+<figure
+  class="content-item"
+>
+  <img
+    class="content-item_img"
+    src="poster_path"
+  />
+  <figcaption
+    class="content-item__description"
+  >
+    <span
+      class="content-item_year"
+    >
+      2014
+    </span>
+    <span
+      class="content-item_title"
+    >
+      <b>
+        Pulp Fiction
+      </b>
+    </span>
+    <span
+      class="content-item_genre"
+    >
+      Adventure & Science
+    </span>
+  </figcaption>
+</figure>
+`;

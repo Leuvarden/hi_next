@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 import EmptyContent from './contentItems/EmptyContent';
 import ContentItem from './contentItems/ContentItem';
-import './../../scss/content-area.scss';
+import './../../../static/styles/content-area.scss';
 import Router from 'next/router';
 
 class ContentArea extends Component {

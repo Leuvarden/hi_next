@@ -5,7 +5,7 @@ import { fetchMovieById, fetchSameGenres} from './../thunks/FetchMovies';
 
 let mapStateToProps = (state, ownProps) => {
     return {
-        filmId: ownProps.id,
+        filmId: ownProps.router.query.id,
         sortBy: state.sortBy,
         activeMovie: state.activeMovie,
         sameGenreMovies: state.sameGenreMovies
@@ -25,10 +25,10 @@ let mapDispatchToProps = (dispatch) => {
 };
 
 export default 
-// withRouter(
+withRouter(
     connect(
         mapStateToProps, 
         mapDispatchToProps
     )(FilmPage)
-// );
+);
 
