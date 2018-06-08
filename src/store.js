@@ -5,9 +5,12 @@ import throttle from 'lodash/throttle';
 
 const middleware = [ thunk ];
 
-const store = createStore(
-    rootReducer, 
-    applyMiddleware(...middleware)
-);
+const store = (initialState, options) => {
+    return createStore(
+        rootReducer, 
+        initialState,
+        applyMiddleware(thunk)
+    );
+}
 
 export default store;

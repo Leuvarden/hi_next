@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import * as constants from './../../actions/constants';
+import * as constants from './../actions/constants';
 
 export let activeMovie = (state = {}, action) => {
     switch (action.type) {

@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm renders as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SearchForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <div
+          className="search-panel__form"
+        >
+          <label
+            htmlFor="searchPanelInput"
+          >
+            Find your movie
+          </label>
+          <SearchInput />
+        </div>,
+        <div
+          className="search-panel__filter"
+        >
+          <label
+            id="filterDescription"
+          >
+            Search by:
+          </label>
+          <FilterButtons />
+          <SearchButton />
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="searchPanelInput"
+            >
+              Find your movie
+            </label>,
+            <SearchInput />,
+          ],
+          "className": "search-panel__form",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Find your movie",
+              "htmlFor": "searchPanelInput",
+            },
+            "ref": null,
+            "rendered": "Find your movie",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "searchParams": undefined,
+              "setSearchParams": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label
+              id="filterDescription"
+            >
+              Search by:
+            </label>,
+            <FilterButtons />,
+            <SearchButton />,
+          ],
+          "className": "search-panel__filter",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Search by:",
+              "id": "filterDescription",
+            },
+            "ref": null,
+            "rendered": "Search by:",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "searchParams": undefined,
+              "setSearchParams": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "searchParams": undefined,
+              "setSearchParams": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <div
+            className="search-panel__form"
+          >
+            <label
+              htmlFor="searchPanelInput"
+            >
+              Find your movie
+            </label>
+            <SearchInput />
+          </div>,
+          <div
+            className="search-panel__filter"
+          >
+            <label
+              id="filterDescription"
+            >
+              Search by:
+            </label>
+            <FilterButtons />
+            <SearchButton />
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="searchPanelInput"
+              >
+                Find your movie
+              </label>,
+              <SearchInput />,
+            ],
+            "className": "search-panel__form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Find your movie",
+                "htmlFor": "searchPanelInput",
+              },
+              "ref": null,
+              "rendered": "Find your movie",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "searchParams": undefined,
+                "setSearchParams": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label
+                id="filterDescription"
+              >
+                Search by:
+              </label>,
+              <FilterButtons />,
+              <SearchButton />,
+            ],
+            "className": "search-panel__filter",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Search by:",
+                "id": "filterDescription",
+              },
+              "ref": null,
+              "rendered": "Search by:",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "searchParams": undefined,
+                "setSearchParams": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "searchParams": undefined,
+                "setSearchParams": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

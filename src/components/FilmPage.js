@@ -20,10 +20,15 @@ class FilmPage extends Component {
         );
     }
     
-    //todo: FilmPage doesn't rerender after navigation through links, location of render persists
     componentDidMount() {
         this.props.fetchMovieById(this.props.router.query.id);
         this.props.getSameGenres(this.props.filmId, this.props.sortBy);
+    }
+
+    componentWillReceiveProps() {
+        if (this.props.router.query.id !== this.props.filmId) {
+            this.props.fetchMovieById(this.props.router.query.id);
+        }
     }
 }
 
