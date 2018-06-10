@@ -1,7 +1,7 @@
-import React from 'react';
-import SearchFormContainer from './../../containers/SearchFormContainer';
-import SortPanelContainer from './../../containers/SortPanelContainer';
-import './../../../static/styles/search-panel.scss';
+import React from 'react'
+import SearchFormContainer from './../../containers/SearchFormContainer'
+import SortPanelContainer from './../../containers/SortPanelContainer'
+import './../../../static/styles/search-panel.scss'
 
 const SearchPanel = () => {
     return (
@@ -11,7 +11,7 @@ const SearchPanel = () => {
                 <SortPanelContainer />
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default SearchPanel;
+export default SearchPanel

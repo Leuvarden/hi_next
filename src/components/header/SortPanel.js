@@ -1,6 +1,6 @@
-import React from 'react';
-import SortButton from '../../containers/SortButtonContainer';
-import PropTypes from 'prop-types';
+import React from 'react'
+import SortButton from '../../containers/SortButtonContainer'
+import PropTypes from 'prop-types'
 
 const SortPanel = ({ moviesFound }) => {
     return (
@@ -15,11 +15,11 @@ const SortPanel = ({ moviesFound }) => {
                 <SortButton criterion='title'>title</SortButton>
             </span>
         </div>
-    );
-};
+    )
+}
 
-export default SortPanel;
+export default SortPanel
 
 SortPanel.propTypes = {
     moviesFound: PropTypes.number
-};
+}

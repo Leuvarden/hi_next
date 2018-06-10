@@ -1,8 +1,8 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import FilmPanel from './main/FilmPanel';
-import ContentArea from './main/ContentArea';
-import './../../static/styles/film-panel.scss';
+import React, { Component, Fragment } from 'react'
+import PropTypes from 'prop-types'
+import FilmPanel from './main/FilmPanel'
+import ContentArea from './main/ContentArea'
+import './../../static/styles/film-panel.scss'
 
 class FilmPage extends Component {
     render () {
@@ -17,11 +17,11 @@ class FilmPage extends Component {
                     activeMovie={this.props.activeMovie} 
                 />
             </div>
-        );
+        )
     }
 }
 
-export default FilmPage;
+export default FilmPage
 
 FilmPage.propTypes = {
     activeMovie: PropTypes.object,
@@ -30,4 +30,4 @@ FilmPage.propTypes = {
     fetchMovieById: PropTypes.func,
     filmId: PropTypes.any,
     sortBy: PropTypes.string
-};
+}

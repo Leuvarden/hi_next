@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Link from 'next/link'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 const ContentLink = ({ id, children }) => (
     <Link href={`/films?id=${id}`}  
@@ -8,11 +8,11 @@ const ContentLink = ({ id, children }) => (
     >
         <a>{children}</a>
     </Link>
-);
+)
 
-export default ContentLink;
+export default ContentLink
 
 ContentLink.propTypes = {
     id: PropTypes.number,
     children: PropTypes.any
-};
+}

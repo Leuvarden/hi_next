@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import SearchButton from './SearchButton';
-import FilterButtons from './FilterButtons';
-import SearchInput from './SearchInput';
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
+import SearchButton from './SearchButton'
+import FilterButtons from './FilterButtons'
+import SearchInput from './SearchInput'
 
 
 const SearchForm = ({searchParams, setSearchParams}) => {
@@ -29,13 +29,13 @@ const SearchForm = ({searchParams, setSearchParams}) => {
                 />
             </div>
         </Fragment>
-    );
-};
+    )
+}
 
-export default SearchForm;
+export default SearchForm
 
 SearchForm.propTypes = {
     setSearchParams: PropTypes.func,
     searchParams: PropTypes.object
-};
+}
 

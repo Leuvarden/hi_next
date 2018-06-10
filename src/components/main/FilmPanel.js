@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import './../../../static/styles/film-panel.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import './../../../static/styles/film-panel.scss'
 
 export class FilmPanel extends Component {
     render () {
@@ -12,7 +12,7 @@ export class FilmPanel extends Component {
                 </figure>
                 {this.getSameGenres()}
             </section>
-        );
+        )
     }
 
     getCaption () {
@@ -29,7 +29,7 @@ export class FilmPanel extends Component {
                     {this.props.movie.overview}
                 </p>  
             </figcaption>
-        );
+        )
     }
 
     getPoster () {
@@ -37,7 +37,7 @@ export class FilmPanel extends Component {
             <div className="film-panel_poster"> 
                 <img src={this.props.movie.poster_path}></img>
             </div>
-        );
+        )
     }
 
     getSameGenres() {
@@ -45,11 +45,11 @@ export class FilmPanel extends Component {
             <div className="film-panel__figure film-panel__sorting">
                 <span>Films by {this.props.movie.genres[0]} genre</span>
             </div>
-        );
+        )
     }
 }
 
-export default FilmPanel;
+export default FilmPanel
 
 FilmPanel.propTypes = {
     movie: PropTypes.object,
@@ -58,4 +58,4 @@ FilmPanel.propTypes = {
     title: PropTypes.string,
     poster_path: PropTypes.string,
     release_date: PropTypes.string
-};
+}

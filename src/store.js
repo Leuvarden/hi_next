@@ -1,16 +1,13 @@
-import thunk from 'redux-thunk';
-import { createStore, applyMiddleware } from 'redux';
-import rootReducer from './reducers/rootReducer';
-import throttle from 'lodash/throttle';
+import thunk from 'redux-thunk'
+import { createStore, applyMiddleware } from 'redux'
+import rootReducer from './reducers/rootReducer'
 
-const middleware = [ thunk ];
-
-const store = (initialState, options) => {
+const store = (initialState) => {
     return createStore(
         rootReducer, 
         initialState,
         applyMiddleware(thunk)
-    );
+    )
 }
 
-export default store;
+export default store

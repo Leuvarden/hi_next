@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ContentLink from './../../../containers/ContentLink';
+import React from 'react'
+import PropTypes from 'prop-types'
+import ContentLink from './../../../containers/ContentLink'
 
 const ContentItemCaption = ({movie}) => {
     return (
@@ -21,11 +21,11 @@ const ContentItemCaption = ({movie}) => {
                     movie.genres[0]}
             </span>
         </figcaption>
-    );
-};
+    )
+}
 
-export default ContentItemCaption;
+export default ContentItemCaption
 
 ContentItemCaption.propTypes = {
     movie: PropTypes.object
-};
+}

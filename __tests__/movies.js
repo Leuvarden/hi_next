@@ -44,6 +44,6 @@ const response = {
         }
     ], 
     'json': () => response,
-};
+}
 
-export default response;
+export default response

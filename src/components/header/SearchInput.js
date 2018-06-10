@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const SearchInput = ({searchParams, setSearchParams}) => {
     return (
@@ -11,17 +11,17 @@ const SearchInput = ({searchParams, setSearchParams}) => {
                     setSearchParams({
                         query: e.target.value, 
                         searchBy: searchParams.searchBy
-                    });
-                    e.target.value = '';
+                    })
+                    e.target.value = ''
                 }
             }}
         />
-    );
-};
+    )
+}
 
-export default SearchInput;
+export default SearchInput
 
 SearchInput.propTypes = {
     setSearchParams: PropTypes.func,
     searchParams: PropTypes.object
-};
+}

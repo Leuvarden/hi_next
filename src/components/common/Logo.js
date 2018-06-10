@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import Router from 'next/router';
-import { withRouter } from 'next/router';
+import PropTypes from 'prop-types'
+import Router from 'next/router'
+import { withRouter } from 'next/router'
 
 const Logo = ({router, children}) => {
     return (
@@ -10,7 +10,7 @@ const Logo = ({router, children}) => {
                 {router.asPath.includes('films') && children}
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default withRouter(Logo);
+export default withRouter(Logo)

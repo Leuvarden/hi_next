@@ -1,14 +1,14 @@
-import { combineReducers } from 'redux';
-import * as constants from './../actions/constants';
+import { combineReducers } from 'redux'
+import * as constants from './../actions/constants'
 
 export let activeMovie = (state = {}, action) => {
     switch (action.type) {
     case constants.MOVIE_SELECTED:
-        return action.payload;
+        return action.payload
     default:
-        return state;
+        return state
     }
-};
+}
 
 export const dataReducer = (state = [], action) => {
     switch (action.type) {
@@ -16,20 +16,20 @@ export const dataReducer = (state = [], action) => {
         return {
             ...state,
             data: action.data
-        };
+        }
     default:
-        return state;
+        return state
     }
-};
+}
 
 export const sortBy = (state = 'release_date', action) => {
     switch (action.type) {
     case constants.SET_SORTING:
-        return action.criterion;
+        return action.criterion
     default:
-        return state;
+        return state
     }
-};
+}
 
 export const searchParams = (state = {searchBy: 'title', query: ''}, action) => {
     switch (action.type) {
@@ -38,20 +38,20 @@ export const searchParams = (state = {searchBy: 'title', query: ''}, action) => 
             ...state,
             query: action.query, 
             searchBy: action.searchBy
-        };
+        }
     default:
-        return state;
+        return state
     }
-};
+}
 
 export const sameGenreMovies = (state = [], action) => {
     switch (action.type) {
     case constants.SET_SAME_GENRES_MOVIES:
-        return action.movies;
+        return action.movies
     default:
-        return state;
+        return state
     }
-};
+}
 
 let rootReducer = combineReducers({
     data: dataReducer,
@@ -59,6 +59,6 @@ let rootReducer = combineReducers({
     sortBy,
     searchParams,
     sameGenreMovies
-});
+})
 
-export default rootReducer;
+export default rootReducer

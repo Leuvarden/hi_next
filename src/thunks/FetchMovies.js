@@ -2,10 +2,10 @@ import {
     setMoviesToStore, 
     selectMovie, 
     setSameGenresMovies 
-} from './../actions';
+} from './../actions'
 import 'isomorphic-unfetch'
 
-const url = 'http://react-cdp-api.herokuapp.com/movies';
+const url = 'http://react-cdp-api.herokuapp.com/movies'
 
 export const fetchMovies = (criterion, term) => {
     return (dispatch) => {
@@ -15,32 +15,32 @@ export const fetchMovies = (criterion, term) => {
                 dispatch(setMoviesToStore(response.data, criterion, term))
             )
             .catch(() => {
-                dispatch(setMoviesToStore([]));
-            });
-    };
-};
+                dispatch(setMoviesToStore([]))
+            })
+    }
+}
 
 export const fetchMoviesForSearch = (searchQuery, searchBy, sortBy) => {
     return (dispatch) => {
-        let urlSearch =  `${url}/?search=${searchQuery}&searchBy=${searchBy}`;
+        let urlSearch =  `${url}/?search=${searchQuery}&searchBy=${searchBy}`
         if (sortBy) {
-            urlSearch  += `&sortBy=${sortBy}`;
+            urlSearch  += `&sortBy=${sortBy}`
         }
 
         return fetch(urlSearch)
             .then(res =>  res.json())
             .then(res => {
-                dispatch(setMoviesToStore(res.data));
+                dispatch(setMoviesToStore(res.data))
             })
             .catch(() => {
-                dispatch(setMoviesToStore([]));
-            });
-    }; 
-};
+                dispatch(setMoviesToStore([]))
+            })
+    } 
+}
 
 export const fetchMovieById = (id) => {
     return (dispatch) => {
-        let urlSearch = `${url}/${id}`;
+        let urlSearch = `${url}/${id}`
 
         return fetch(urlSearch)
             .then(res => res.json())
@@ -48,27 +48,27 @@ export const fetchMovieById = (id) => {
                 dispatch(selectMovie(res))
             )
             .catch(() => {
-                dispatch(selectMovie({}));
-            });
-    };
-};
+                dispatch(selectMovie({}))
+            })
+    }
+}
 
 export const fetchSameGenres = (id) => {
     return (dispatch) => {
-        let urlSearch = `${url}/${id}`;
+        let urlSearch = `${url}/${id}`
 
         return fetch(urlSearch)
             .then(res =>  res.json())
             .then(res => {
-                let genre = res.genres[0];
-                let urlSearch2 =  `${url}/?search=${genre}&searchBy=genres`;
+                let genre = res.genres[0]
+                let urlSearch2 =  `${url}/?search=${genre}&searchBy=genres`
 
                 fetch(urlSearch2)
                     .then(res => res.json())
                     .then(res =>
                         dispatch(setSameGenresMovies(res.data))
-                    );
-            });
+                    )
+            })
 
-    }; 
-};
+    } 
+}

@@ -1,6 +1,6 @@
-import React from 'react';
-import ContentAreaContainer from './../containers/ContentAreaContainer';
-import SearchPanel from './header/SearchPanel';
+import React from 'react'
+import ContentAreaContainer from './../containers/ContentAreaContainer'
+import SearchPanel from './header/SearchPanel'
 
 const MainPage = () => {
     return (
@@ -8,7 +8,7 @@ const MainPage = () => {
             <SearchPanel />
             <ContentAreaContainer />
         </main>
-    );
-};
+    )
+}
 
-export default MainPage;
+export default MainPage

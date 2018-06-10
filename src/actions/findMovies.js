@@ -1,27 +1,27 @@
-import _filter from 'lodash/filter';
-import _includes from 'lodash/includes';
-import _isArray from 'lodash/isArray';
+import _filter from 'lodash/filter'
+import _includes from 'lodash/includes'
+import _isArray from 'lodash/isArray'
 
 const findMovies = (movies=[], searchFor='title', searchTerm) => {
     if (searchTerm) {
 
         let founded = _filter(movies, (o) => {
 
-            let target;
+            let target
 
             if (_isArray(o[searchFor])) {
-                target = o[searchFor].join(' ').toLowerCase();
+                target = o[searchFor].join(' ').toLowerCase()
             } else {
-                target = o[searchFor].toString().toLowerCase();
+                target = o[searchFor].toString().toLowerCase()
             }
             
-            return _includes(target, searchTerm.trim().toLowerCase());
-        });
+            return _includes(target, searchTerm.trim().toLowerCase())
+        })
 
-        return [].concat(founded);
+        return [].concat(founded)
     }
 
-    return movies;
-};
+    return movies
+}
 
-export default findMovies;
+export default findMovies

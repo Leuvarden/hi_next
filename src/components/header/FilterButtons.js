@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-const searches = ['title', 'genres'];
+const searches = ['title', 'genres']
 
 const FilterButtons = ({ searchParams, setSearchParams }) => {
     return searches.map((name) => 
@@ -18,7 +18,7 @@ const FilterButtons = ({ searchParams, setSearchParams }) => {
             {name}
         </button>
 
-    );
-};
+    )
+}
 
-export default FilterButtons;
+export default FilterButtons

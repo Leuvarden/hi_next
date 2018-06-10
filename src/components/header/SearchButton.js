@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const SearchButton = ({ setSearchParams, searchParams, sortBy }) => {
     
@@ -7,23 +7,23 @@ const SearchButton = ({ setSearchParams, searchParams, sortBy }) => {
         <button 
             className="search-panel__button-search"
             onClick={() => {
-                let term = document.getElementById('searchPanelInput');
-                let query = term ? term.value : 'all';
+                let term = document.getElementById('searchPanelInput')
+                let query = term ? term.value : 'all'
                 setSearchParams({
                     query, 
                     searchBy: searchParams.searchBy
-                }, sortBy);
+                }, sortBy)
             } }
         >
             Search
         </button>
-    );
-};
+    )
+}
 
-export default SearchButton;
+export default SearchButton
 
 SearchButton.propTypes = {
     searchParams: PropTypes.object,
     setSearchParams: PropTypes.func,
     sortBy: PropTypes.string
-};
+}

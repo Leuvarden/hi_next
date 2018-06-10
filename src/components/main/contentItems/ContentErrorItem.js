@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ContentErrorItem = () => {
     return (
@@ -10,7 +10,7 @@ const ContentErrorItem = () => {
                 </span>
             </figcaption>
         </figure>
-    );
-};
+    )
+}
 
-export default ContentErrorItem;
+export default ContentErrorItem
