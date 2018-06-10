@@ -1,19 +1,36 @@
 import React, { Component } from 'react'
 import Page from './../src/components/Page'
-import FilmPageContainer from './../src/containers/FilmPageContainer'
+import FilmPage from './../src/components/FilmPage'
+import { fetchMovieById, fetchSameGenres } from './../src/thunks/FetchMovies'
+import { connect } from 'react-redux';
 import './../static/styles/body.scss'
 
-export default class extends React.Component {
-    static getInitialProps ({ query: { id } }) {
-      return { id }
+class Films extends React.Component {
+    static async getInitialProps ({ req, store, isServer, pathname, query }) {
+      await store.dispatch(fetchMovieById(query.id));
+      await store.dispatch(fetchSameGenres(query.id))
     }
   
     render () {
       return <div>
          <Page>
-             <FilmPageContainer id={this.props.id}/>
+             <FilmPage 
+                id={this.props.id} 
+                activeMovie={this.props.activeMovie}
+                sameGenreMovies={this.props.sameGenreMovies}
+                />
          </Page>
       </div>
       
     }
   }
+
+  let mapStateToProps = (state, ownProps) => {
+    return {
+        sortBy: state.sortBy,
+        activeMovie: state.activeMovie,
+        sameGenreMovies: state.sameGenreMovies
+    };
+};
+
+  export default connect(mapStateToProps)(Films)

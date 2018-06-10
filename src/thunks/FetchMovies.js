@@ -3,6 +3,7 @@ import {
     selectMovie, 
     setSameGenresMovies 
 } from './../actions';
+import 'isomorphic-unfetch'
 
 const url = 'http://react-cdp-api.herokuapp.com/movies';
 
@@ -38,7 +39,6 @@ export const fetchMoviesForSearch = (searchQuery, searchBy, sortBy) => {
 };
 
 export const fetchMovieById = (id) => {
-    console.log(id)
     return (dispatch) => {
         let urlSearch = `${url}/${id}`;
 
@@ -46,8 +46,10 @@ export const fetchMovieById = (id) => {
             .then(res => res.json())
             .then(res =>
                 dispatch(selectMovie(res))
-            );
-
+            )
+            .catch(() => {
+                dispatch(selectMovie({}));
+            });
     };
 };
 
