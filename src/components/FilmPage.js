@@ -19,17 +19,6 @@ class FilmPage extends Component {
             </div>
         );
     }
-    
-    componentDidMount() {
-        this.props.fetchMovieById(this.props.router.query.id);
-        this.props.getSameGenres(this.props.filmId, this.props.sortBy);
-    }
-
-    componentWillReceiveProps() {
-        if (this.props.router.query.id !== this.props.filmId) {
-            this.props.fetchMovieById(this.props.router.query.id);
-        }
-    }
 }
 
 export default FilmPage;

@@ -20,12 +20,15 @@ class ContentArea extends Component {
         if (!Router.router.query) {
             return;
         }
-
+        
         let searchBy = Router.router.query.searchBy
-        let query = (Router.router.query.query === 'all') ? '' : Router.router.query.query;
+        let query = Router.router.query.query;
 
         if (query && query.length) {
-            this.props.setSearchParams({query, searchBy});
+            
+            this.props.setSearchParams({
+                query: query === 'all' ? '' : query, 
+                searchBy});
         }
     }
     
