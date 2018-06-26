@@ -12,10 +12,10 @@ export const fetchMovies = (criterion, term) => {
         return fetch(url)
             .then(response => response.json())
             .then(response => 
-                dispatch(setMoviesToStore(response.data, criterion, term))
+                dispatch(setSameGenresMovies(response.data, criterion, term))
             )
             .catch(() => {
-                dispatch(setMoviesToStore([]));
+                dispatch(setSameGenresMovies([]));
             });
     };
 };
@@ -66,22 +66,14 @@ export const fetchMovieById = (id) => {
     };
 };
 
-export const fetchSameGenres = (id) => {
+export const fetchSameGenres = (genre) => {
     return (dispatch) => {
-        let urlSearch = `${url}/${id}`;
+        let urlSearch =  `${url}/?search=${genre}&searchBy=genres`;
 
         return fetch(urlSearch)
             .then(res =>  res.json())
-            .then(res => {
-                let genre = res.genres[0];
-                let urlSearch2 =  `${url}/?search=${genre}&searchBy=genres`;
-
-                fetch(urlSearch2)
-                    .then(res => res.json())
-                    .then(res =>
-                        dispatch(setSameGenresMovies(res.data))
-                    );
-            });
-
+            .then(res => 
+                dispatch(setSameGenresMovies(res.data)) 
+            );
     }; 
 };
