@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import * as constants from './../actions/constants';
+import { createSelector } from 'reselect'
 
 export let activeMovie = (state = {}, action) => {
     switch (action.type) {
@@ -52,6 +53,8 @@ export const sameGenreMovies = (state = [], action) => {
         return state;
     }
 };
+
+
 
 let rootReducer = combineReducers({
     data: dataReducer,

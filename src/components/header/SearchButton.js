@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'react-bootstrap';
 
 const SearchButton = ({ setSearchParams, searchParams, sortBy }) => {
     
     return (
-        <button 
+        <Button  color="danger"
             className="search-panel__button-search"
             onClick={() => {
                 let term = document.getElementById('searchPanelInput');
@@ -16,7 +17,7 @@ const SearchButton = ({ setSearchParams, searchParams, sortBy }) => {
             } }
         >
             Search
-        </button>
+        </Button>
     );
 };
 
