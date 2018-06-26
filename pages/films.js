@@ -1,8 +1,9 @@
+// @flow
 import React, { Component } from 'react'
 import Page from './../src/components/Page'
 import FilmPage from './../src/components/FilmPage'
 import { fetchMovieById, fetchSameGenres, fetchMovies } from './../src/thunks/FetchMovies'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import './../static/styles/body.scss'
 
 class Films extends React.Component {
@@ -28,7 +29,6 @@ class Films extends React.Component {
 
   let mapStateToProps = (state) => {
     return {
-        sortBy: state.sortBy,
         activeMovie: state.activeMovie,
         sameGenreMovies: state.sameGenreMovies
     };
