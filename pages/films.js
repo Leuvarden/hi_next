@@ -4,7 +4,7 @@ import Page from './../src/components/Page'
 import FilmPage from './../src/components/FilmPage'
 import { fetchMovieById, fetchSameGenres, fetchMovies } from './../src/thunks/FetchMovies'
 import { connect } from 'react-redux'
-import './../static/styles/body.scss'
+// import './../static/styles/body.scss'
 
 class Films extends React.Component {
     static async getInitialProps ({ req, store, isServer, pathname, query }) {

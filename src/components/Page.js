@@ -1,6 +1,5 @@
 import Logo from './common/Logo';
 import ErrorBoundary from './common/Error'
-import { Provider } from 'react-redux';
 import Link from 'next/link'
 
 const MainPage = ({children}) => (

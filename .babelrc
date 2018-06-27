@@ -9,7 +9,7 @@
       "test": {
         "presets": [
           [
-            "next/babel", 
+            ["next/babel", "flow"], 
             { "preset-env": 
               { 
               "modules": "commonjs" 

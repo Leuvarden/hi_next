@@ -38,9 +38,9 @@ class ContentArea extends Component {
         }
 
         return this.props.movies.map((el) => {
-            if (this.props.activeMovie && el.title === this.props.activeMovie.title) {
-                return null;
-            }
+            // if (this.props.activeMovie && el.title === this.props.activeMovie.title) {
+            //     return null;
+            // }
             return (
                 <ContentItem
                     key={uniqueId(el.id)}
