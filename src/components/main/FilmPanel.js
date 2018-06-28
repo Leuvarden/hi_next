@@ -1,50 +1,91 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './../../../static/styles/film-panel.scss';
+import styled from 'styled-components';
+import pink from '@material-ui/core/colors/pink';
 
+const FilmPanelSection = styled.section`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+`
+
+const FilmPanelFigure = styled.figure`
+    flex: 0 1 80%;
+    display: flex;
+    margin-bottom: 0;
+`
+
+const FilmPanelCaption = styled.figcaption`
+    h1 {
+        color: ${pink[500]};
+    }
+
+    .category,
+    .overview {
+    font-weight: 400;
+    }
+
+    .year {
+    font-weight: 600;
+    margin: 0 30px 0 0;
+    }
+
+    .duration {
+    font-weight: 600;
+    }
+`
 export class FilmPanel extends Component {
     render () {
         return this.props.movie && (
-            <section className="film-panel__container">
-                <figure  className="film-panel__figure">
+            <FilmPanelSection>
+                <FilmPanelFigure>
                     {this.getPoster()}
                     {this.getCaption()}
-                </figure>
+                </FilmPanelFigure>
                 {this.getSameGenres()}
-            </section>
+            </FilmPanelSection>
         );
     }
 
     getCaption () {
         return (
-            <figcaption className="film-panel_description">
+            <FilmPanelCaption>
                 <h1>{this.props.movie.title}</h1>
-                <p className="film-panel_category">
+                <p className="category">
                     {this.props.movie.genres[0]}
                 </p>
-                <p className="film-panel_year">
+                <p className="year">
                     {this.props.movie.release_date.slice(0, 4)}
                 </p>
-                <p className="film-panel_overview">
+                <p className="overview">
                     {this.props.movie.overview}
                 </p>  
-            </figcaption>
+            </FilmPanelCaption>
         );
     }
 
     getPoster () {
         return (
-            <div className="film-panel_poster"> 
-                <img src={this.props.movie.poster_path}></img>
+            <div> 
+                <img 
+                src={this.props.movie.poster_path}
+                style = {{
+                    margin: '10px 40px 10px 0',
+                    maxHeight: '320px'
+                }}
+                />
             </div>
         );
     }
 
     getSameGenres() {
         return (
-            <div className="film-panel__figure film-panel__sorting">
+            <FilmPanelFigure style={{    
+                fontSize: '1.3em',
+                marginBottom: '10px'
+            }}>
                 <span>Films by {this.props.movie.genres[0]} genre</span>
-            </div>
+            </FilmPanelFigure>
         );
     }
 }

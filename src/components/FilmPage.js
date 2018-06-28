@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import FilmPanel from './main/FilmPanel';
 import ContentArea from './main/ContentArea';
-import './../../static/styles/film-panel.scss';
+// import './../../static/styles/film-panel.scss';
 
 class FilmPage extends Component {
     render () {

@@ -33,13 +33,13 @@ export const sortBy = (state = 'release_date', action) => {
 };
 
 export const searchParams = (state = {searchBy: 'title', query: ''}, action) => {
-    switch (action.type) {
+    switch (action.type) { //rewrite state to smth from immutable
     case 'SET_SEARCH_PARAMS':
         return {
             ...state,
             query: action.query, 
             searchBy: action.searchBy
-        };
+        }; // => immutable.state.set({smth})
     default:
         return state;
     }

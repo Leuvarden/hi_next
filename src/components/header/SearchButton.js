@@ -1,27 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Button } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
 
-const SearchButton = ({ setSearchParams, searchParams, sortBy }) => {
-    
-    return (
-        <Button  
-            color="primary" variant="contained"
-            // className="search-panel__button-search"
-            onClick={() => {
+const SearchButton = ({ setSearchParams, searchParams, sortBy, classes }) => (       
+    <Button  
+        color="secondary" variant="contained"
+        style={{float:'right'}}
+        onClick={() => {
                 let term = document.getElementById('searchPanelInput');
                 let query = term ? term.value : 'all';
                 setSearchParams({
                     query, 
                     searchBy: searchParams.searchBy
                 }, sortBy);
-            } }
-        >
-            Search
-        </Button>
-    );
-};
+        } }
+    >
+        Search
+    </Button>
+)
 
 export default SearchButton;
 

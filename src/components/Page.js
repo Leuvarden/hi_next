@@ -6,7 +6,7 @@ const MainPage = ({children}) => (
         <div>
             <Logo>                
                 <Link href="/">
-                    <a className="search-panel__button-search">Search</a>
+                    <a className="button-search">Search</a>
                 </Link>
             </Logo>
             <ErrorBoundary showOnError={<h1>Something went wrong</h1>}>
