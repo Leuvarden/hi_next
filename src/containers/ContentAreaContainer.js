@@ -3,14 +3,20 @@ import { connect } from 'react-redux';
 import ContentArea from './../components/main/ContentArea';
 import { withRouter } from 'next/router';
 import { setSearchParams } from './../actions/index';
+import { createSelector } from 'reselect'
 
 const sortMovies = (movies=[], sortBy='title') => orderBy(movies, [sortBy], 'asc');
+const dataSelector = state => state.data.data
+const sortSelector = state => state.sortBy
 
-let mapStateToProps = (state) => {
+const memoizedSorting = createSelector(
+    [dataSelector, sortSelector],
+    (data, sortBy) => sortMovies(data, sortBy)
+)
+
+const mapStateToProps = (state) => {
     return {
-        movies: sortMovies(state.data.data, state.sortBy), //todo: remove this
-        activeMovie: state.activeMovie,
-        searchTerm: state.searchTerm
+        movies: memoizedSorting(state)
     };
 };
 

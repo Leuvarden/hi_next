@@ -6,7 +6,6 @@ import ContentArea from './main/ContentArea';
 class FilmPage extends Component {
     render () {
         let active = this.props.activeMovie
-        console.log(this.props)
         return (
             <div>
                 {active.genres && 

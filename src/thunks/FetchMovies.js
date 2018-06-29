@@ -3,6 +3,8 @@ import {
     selectMovie, 
     setSameGenresMovies 
 } from './../actions';
+
+import { fromJS, List, Map } from 'immutable';
 import 'isomorphic-unfetch'
 
 const url = 'http://react-cdp-api.herokuapp.com/movies';
@@ -46,7 +48,7 @@ export const fetchMovieById = (id) => {
             .then(res => res.json())
             .then(res => dispatch(selectMovie(res)) )
             .catch(() => {
-                dispatch(selectMovie({}))
+                dispatch(selectMovie(new Map()))
             });
     };
 };
