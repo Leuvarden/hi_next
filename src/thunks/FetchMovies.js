@@ -44,25 +44,10 @@ export const fetchMovieById = (id) => {
 
         return fetch(urlSearch)
             .then(res => res.json())
-            .then(res =>{
-                dispatch(selectMovie(res))
-                return res;
-            }
-            )
-            .then((res) => {
-                let genre = res.genres[0];
-                let urlSearch2 =  `${url}/?search=${genre}&searchBy=genres`;
-
-                fetch(urlSearch2)
-                    .then(res => res.json())
-                    .then(res =>{
-                        dispatch(setSameGenresMovies(res.data))
-                    });
-            })
+            .then(res => dispatch(selectMovie(res)) )
             .catch(() => {
-                dispatch.selectMovie({})
+                dispatch(selectMovie({}))
             });
-
     };
 };
 

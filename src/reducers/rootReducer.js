@@ -1,11 +1,18 @@
 import { combineReducers } from 'redux';
 import * as constants from './../actions/constants';
 import { createSelector } from 'reselect'
+import { fromJS, List, Map } from 'immutable';
+// import { combineReducers } from 'redux-immutable';
 
-export let activeMovie = (state = {}, action) => {
+const activeMovieInit = fromJS({
+    activeMovie: {}
+}).toMap()
+
+export let activeMovie = (state = activeMovieInit, action) => {
     switch (action.type) {
     case constants.MOVIE_SELECTED:
-        return action.payload;
+        // return action.payload;
+        return fromJS(state).set('activeMovie', fromJS(action.payload).toMap())
     default:
         return state;
     }

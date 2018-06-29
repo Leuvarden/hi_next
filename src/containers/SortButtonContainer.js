@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import pink from '@material-ui/core/colors/pink';
-import { inherits } from 'util';
 
 const SortButton = ({ active, children, onClick, classes }) => (
     <Button

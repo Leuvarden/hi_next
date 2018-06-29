@@ -2,15 +2,16 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import FilmPanel from './main/FilmPanel';
 import ContentArea from './main/ContentArea';
-// import './../../static/styles/film-panel.scss';
 
 class FilmPage extends Component {
     render () {
+        let active = this.props.activeMovie
+        console.log(this.props)
         return (
             <div>
-                {this.props.activeMovie.genres && 
+                {active.genres && 
                 <FilmPanel 
-                    movie={this.props.activeMovie} 
+                    movie={active} 
                 />}
                 <ContentArea 
                     movies={this.props.sameGenreMovies} 

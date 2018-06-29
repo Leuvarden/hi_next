@@ -5,12 +5,14 @@ import FilmPage from './../src/components/FilmPage'
 import { fetchMovieById, fetchSameGenres, fetchMovies } from './../src/thunks/FetchMovies'
 import { connect } from 'react-redux'
 import './../static/styles/body.scss'
+import { toJS } from 'immutable';
 
 class Films extends React.Component {
     static async getInitialProps ({ req, store, isServer, pathname, query }) {
       await store.dispatch(fetchMovieById(query.id));
 
-      let genresNeeded = store.getState().activeMovie.genres[0]
+      let map = store.getState().activeMovie.get('activeMovie')
+      let genresNeeded = map.get('genres').get(0)
       await store.dispatch(fetchSameGenres(genresNeeded));
     }
   
@@ -18,7 +20,7 @@ class Films extends React.Component {
       return <div>
          <Page>
              <FilmPage 
-                activeMovie={this.props.activeMovie}
+                activeMovie={this.props.activeMovie.get('activeMovie').toObject()}
                 sameGenreMovies={this.props.sameGenreMovies}
                 />
          </Page>

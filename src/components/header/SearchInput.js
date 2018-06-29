@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import pink from '@material-ui/core/colors/pink';
 
 const Input = styled.input`
     display: block;
@@ -9,7 +10,7 @@ const Input = styled.input`
     background: black;
     color: white;
     border: none;
-    border-bottom: 2px solid #f45363;
+    border-bottom: 2px solid ${pink[500]};
     padding: 5px;
 `  
 
