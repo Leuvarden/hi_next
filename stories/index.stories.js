@@ -9,6 +9,8 @@ import FilterButtons from './../src/components/header/FilterButtons'
 import SearchButton from './../src/components/header/SearchButton'
 import './../static/styles/search-panel.scss'
 import SearchForm from './../src/components/header/SearchForm'
+import FilmPanel from './../src/components/main/FilmPanel'
+
 import ContentItem from './../src/components/main/contentItems/ContentItem'
 import ContentItemOld from './ContentItemOld'
 import './../static/styles/content-area.scss'
@@ -53,15 +55,18 @@ storiesOf('Example Button', module)
   )
   .add('to search', () => 
     <SearchButton 
-      searchParams={params}
+      searchParams={params} style={{float: 'left'}}
     />
   )
 
   storiesOf('Form', module)
-  .add('to sort movies', () => 
-    <SearchForm 
+  .add('to sort movies', () => (
+    <div style={{width: '700px', backgroundColor: 'black', padding: '20px'}}>
+      <SearchForm 
       searchParams={params}
     />
+    </div>
+  )
   )
 
   storiesOf('Content item', module)
@@ -73,4 +78,18 @@ storiesOf('Example Button', module)
   .add('old ver', () => 
     <ContentItemOld movie={movie} />
   )
+
+  storiesOf('FilmPanel item', module)
+  .add('white', () => 
+    <FilmPanel 
+      movie={movie}
+    />
+  )
+  .add('black', () => 
+  (<div style={{backgroundColor: 'black', color: '#eee'}}><FilmPanel 
+    movie={movie}
+  /></div>)
+)
+
+  
 
